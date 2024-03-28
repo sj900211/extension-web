@@ -1,5 +1,6 @@
 package run.freshr.common.advice;
 
+import static run.freshr.common.utils.RestUtilAware.error;
 import static run.freshr.common.utils.RestUtilAware.getExceptions;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
