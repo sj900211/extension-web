@@ -38,7 +38,7 @@ import run.freshr.common.dto.response.IdResponse;
 /**
  * 자주 사용하는 공통 기능을 정의
  *
- * @author 류성재
+ * @author FreshR
  * @apiNote 자주 사용하는 공통 기능을 정의
  * @since 2024. 3. 28. 오후 1:30:39
  */
@@ -96,7 +96,7 @@ public abstract class RestUtilAware {
    *
    * @return response entity
    * @apiNote 성공 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> ok() {
@@ -112,7 +112,7 @@ public abstract class RestUtilAware {
    * @param message message
    * @return response entity
    * @apiNote 성공 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> ok(final String message) {
@@ -129,7 +129,7 @@ public abstract class RestUtilAware {
    * @param data 반환 데이터
    * @return response entity
    * @apiNote 성공 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static <T> ResponseEntity<?> ok(final T data) {
@@ -147,7 +147,7 @@ public abstract class RestUtilAware {
    * @param list 반환 목록 데이터
    * @return response entity
    * @apiNote 성공 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static <T> ResponseEntity<?> ok(final List<T> list) {
@@ -165,7 +165,7 @@ public abstract class RestUtilAware {
    * @param page 반환 페이지 데이터
    * @return response entity
    * @apiNote 성공 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static <T> ResponseEntity<?> ok(final Page<T> page) {
@@ -182,7 +182,7 @@ public abstract class RestUtilAware {
    * @param body 반환 모델
    * @return response entity
    * @apiNote 성공 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> ok(final ResponseData body) {
@@ -196,7 +196,7 @@ public abstract class RestUtilAware {
    * @param message    메시지
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final HttpStatus httpStatus, final String message) {
@@ -215,7 +215,7 @@ public abstract class RestUtilAware {
    * @param args    formatting 값 목록
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final String message, final Object[] args) {
@@ -233,7 +233,7 @@ public abstract class RestUtilAware {
    * @param exceptionData exception data
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final ExceptionData exceptionData) {
@@ -247,7 +247,7 @@ public abstract class RestUtilAware {
    * @param message       메시지
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final ExceptionData exceptionData,
@@ -263,7 +263,7 @@ public abstract class RestUtilAware {
    * @param args          formatting 값 목록
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final ExceptionData exceptionData,
@@ -285,7 +285,7 @@ public abstract class RestUtilAware {
    * @param message    메시지
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final HttpStatus httpStatus, final String name,
@@ -308,7 +308,7 @@ public abstract class RestUtilAware {
    * @param bindingResult RequestBody Valid 에러 객체
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final BindingResult bindingResult) {
@@ -323,7 +323,7 @@ public abstract class RestUtilAware {
    * @param errors ModelAttribute Valid 에러 객체
    * @return response entity
    * @apiNote 에러 반환
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final Errors errors) {
@@ -338,7 +338,7 @@ public abstract class RestUtilAware {
    * @param name          에러 필드 이름
    * @param bindingResult RequestBody Valid 에러 객체
    * @apiNote valid 에러 항목 추가 - 잘못된 값
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectWrong(final String name, BindingResult bindingResult) {
@@ -352,7 +352,7 @@ public abstract class RestUtilAware {
    * @param description   description
    * @param bindingResult RequestBody Valid 에러 객체
    * @apiNote valid 에러 항목 추가 - 잘못된 값
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectWrong(final String name, final String description,
@@ -366,7 +366,7 @@ public abstract class RestUtilAware {
    * @param name   name
    * @param errors ModelAttribute Valid 에러 객체
    * @apiNote valid 에러 항목 추가 - 잘못된 값
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectWrong(final String name, Errors errors) {
@@ -380,7 +380,7 @@ public abstract class RestUtilAware {
    * @param description description
    * @param errors      errors
    * @apiNote valid 에러 항목 추가 - 잘못된 값
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectWrong(final String name, final String description, Errors errors) {
@@ -393,7 +393,7 @@ public abstract class RestUtilAware {
    * @param bindingResult RequestBody Valid 에러 객체
    * @param names         names
    * @apiNote valid 에러 항목 추가 - 필수 항목
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectRequired(BindingResult bindingResult, final String... names) {
@@ -406,7 +406,7 @@ public abstract class RestUtilAware {
    * @param name          name
    * @param bindingResult RequestBody Valid 에러 객체
    * @apiNote valid 에러 항목 추가 - 필수 항목
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectRequired(final String name, BindingResult bindingResult) {
@@ -419,7 +419,7 @@ public abstract class RestUtilAware {
    * @param errors ModelAttribute Valid 에러 객체
    * @param names  names
    * @apiNote valid 에러 항목 추가 - 필수 항목
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectRequired(Errors errors, final String... names) {
@@ -432,7 +432,7 @@ public abstract class RestUtilAware {
    * @param name   name
    * @param errors ModelAttribute Valid 에러 객체
    * @apiNote valid 에러 항목 추가 - 필수 항목
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectRequired(final String name, Errors errors) {
@@ -444,7 +444,7 @@ public abstract class RestUtilAware {
    *
    * @param bindingResult RequestBody Valid 에러 객체
    * @apiNote valid 에러 항목 추가 - 권한
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectAuth(BindingResult bindingResult) {
@@ -456,7 +456,7 @@ public abstract class RestUtilAware {
    *
    * @param errors ModelAttribute Valid 에러 객체
    * @apiNote valid 에러 항목 추가 - 권한
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static void rejectAuth(Errors errors) {
@@ -468,7 +468,7 @@ public abstract class RestUtilAware {
    *
    * @return exceptions
    * @apiNote 설정한 예외 항목 조회
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ExceptionsData getExceptions() {
@@ -481,7 +481,7 @@ public abstract class RestUtilAware {
    * @param profile profile 이름
    * @return boolean
    * @apiNote 실행중인 서비스의 profile 체크
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static boolean checkProfile(final String profile) {
@@ -495,7 +495,7 @@ public abstract class RestUtilAware {
    * @param profiles profile 이름 목록
    * @return boolean
    * @apiNote 실행중인 서비스의 profile 체크
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static boolean checkProfile(final String... profiles) {
@@ -510,7 +510,7 @@ public abstract class RestUtilAware {
    * @param id   일련 번호
    * @return id response
    * @apiNote {@link IdResponse} 를 설정
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static <ID> IdResponse<ID> buildId(ID id) {
@@ -553,7 +553,7 @@ public abstract class RestUtilAware {
    *
    * @return config
    * @apiNote 추가 설정 조회
-   * @author 류성재
+   * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public abstract CustomConfigurationAware getConfig();

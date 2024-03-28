@@ -3,7 +3,7 @@ package run.freshr.common.configurations;
 /**
  * URI 정의
  *
- * @author 류성재
+ * @author FreshR
  * @apiNote URI 정의<br>
  *          Annotation 에서 문자가 아닌 변수로 사용해서 관리 포인트를 집중하기 위해 정의
  * @since 2024. 3. 28. 오후 1:29:05

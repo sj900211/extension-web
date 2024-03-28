@@ -26,9 +26,9 @@ import run.freshr.common.exceptions.UnAuthenticatedException;
 /**
  * 전역 예외 처리 설정
  *
- * @author 류성재
+ * @author FreshR
  * @apiNote 전역 예외 처리 설정
- * @since 2023. 6. 16. 오전 11:16:32
+ * @since 2024. 3. 28. 오후 2:21:33
  */
 @RestControllerAdvice
 public class AdviceController {

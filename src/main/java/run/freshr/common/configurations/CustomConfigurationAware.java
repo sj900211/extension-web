@@ -9,7 +9,7 @@ import org.springframework.core.io.Resource;
 /**
  * 필수 추가 설정 항목 설정
  *
- * @author 류성재
+ * @author FreshR
  * @apiNote 필수 추가 설정 항목 설정
  * @since 2024. 3. 28. 오후 1:29:05
  */

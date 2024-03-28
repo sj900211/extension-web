@@ -70,13 +70,13 @@ dependencies {
   api "${group}:configure-extensions:1.0.0.RELEASE"
   api "${group}:configure-jpa:1.0.0.RELEASE"
 
-  // Web Annotation Processor: library-docs-search-docs
-  annotationProcessor 'org.springframework.boot:spring-boot-starter-web'
-
   // JWT: library-core-utils
   implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
   runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
   runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+
+  // Web Annotation Processor: library-docs-search-docs
+  annotationProcessor 'org.springframework.boot:spring-boot-starter-web'
 }
 
 test {
