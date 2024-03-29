@@ -1,7 +1,5 @@
 package run.freshr.common.utils;
 
-import static com.google.common.base.CaseFormat.LOWER_HYPHEN;
-import static com.google.common.base.CaseFormat.UPPER_UNDERSCORE;
 import static java.text.MessageFormat.format;
 import static java.time.format.DateTimeFormatter.ofPattern;
 import static java.util.Arrays.stream;
@@ -270,7 +268,7 @@ public abstract class RestUtilAware {
       final String message, final Object[] args) {
     return error(
         exceptionData.getHttpStatus(),
-        UPPER_UNDERSCORE.to(LOWER_HYPHEN, exceptionData.getHttpStatus().name()),
+        exceptionData.getHttpStatus().getReasonPhrase(),
         exceptionData.getCode(),
         format(ofNullable(message).orElse(exceptionData.getMessage()), args)
     );
