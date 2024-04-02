@@ -43,7 +43,7 @@ import run.freshr.common.dto.response.IdResponse;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public abstract class RestUtilAware {
+public abstract class RestUtilAware<C extends CustomConfigurationAware> {
 
   private static final ObjectMapper objectMapper;
 
@@ -549,12 +549,11 @@ public abstract class RestUtilAware {
   /**
    * 추가 설정 조회
    *
-   * @param <C> type parameter
    * @return config
    * @apiNote 추가 설정 조회
    * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
-  public abstract <C extends CustomConfigurationAware> C getConfig();
+  public abstract C getConfig();
 
 }
