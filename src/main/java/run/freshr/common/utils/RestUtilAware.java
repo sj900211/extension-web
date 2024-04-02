@@ -17,8 +17,6 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Page;
@@ -40,9 +38,7 @@ import run.freshr.common.dto.response.IdResponse;
  * @apiNote 자주 사용하는 공통 기능을 정의
  * @since 2024. 3. 28. 오후 1:30:39
  */
-@Slf4j
 @Component
-@RequiredArgsConstructor
 public abstract class RestUtilAware<C extends CustomConfigurationAware> {
 
   private static final ObjectMapper objectMapper;
