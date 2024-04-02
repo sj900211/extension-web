@@ -212,11 +212,13 @@ public abstract class RestUtilAware {
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final String message, final Object[] args) {
+    ExceptionData error = exceptionsData.getError();
+
     return error(
-        exceptionsData.getError().getHttpStatus(),
-        exceptionsData.getError().getHttpStatus().name(),
-        null,
-        format(ofNullable(message).orElse(exceptionsData.getError().getMessage()), args)
+        error.getHttpStatus(),
+        error.getHttpStatus().name(),
+        error.getCode(),
+        format(ofNullable(message).orElse(error.getMessage()), args)
     );
   }
 
@@ -230,7 +232,7 @@ public abstract class RestUtilAware {
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final ExceptionData exceptionData) {
-    return error(exceptionData, null, null);
+    return error(exceptionData, null, null, null);
   }
 
   /**
@@ -245,13 +247,30 @@ public abstract class RestUtilAware {
    */
   public static ResponseEntity<?> error(final ExceptionData exceptionData,
       final String message) {
-    return error(exceptionData, message, null);
+    return error(exceptionData, message, null, null);
   }
 
   /**
    * 에러 반환
    *
    * @param exceptionData exception data
+   * @param message       메시지
+   * @param code          code
+   * @return response entity
+   * @apiNote 에러 반환
+   * @author FreshR
+   * @since 2024. 4. 2. 오후 2:50:05
+   */
+  public static ResponseEntity<?> error(final ExceptionData exceptionData,
+      final String message, final String code) {
+    return error(exceptionData, code, message, null);
+  }
+
+  /**
+   * 에러 반환
+   *
+   * @param exceptionData exception data
+   * @param code          code
    * @param message       formatting 메시지
    * @param args          formatting 값 목록
    * @return response entity
@@ -260,11 +279,11 @@ public abstract class RestUtilAware {
    * @since 2024. 3. 28. 오후 1:30:39
    */
   public static ResponseEntity<?> error(final ExceptionData exceptionData,
-      final String message, final Object[] args) {
+      final String code, final String message, final Object[] args) {
     return error(
         exceptionData.getHttpStatus(),
         exceptionData.getHttpStatus().getReasonPhrase(),
-        exceptionData.getCode(),
+        ofNullable(code).orElse(exceptionData.getCode()),
         format(ofNullable(message).orElse(exceptionData.getMessage()), args)
     );
   }
