@@ -549,11 +549,12 @@ public abstract class RestUtilAware {
   /**
    * 추가 설정 조회
    *
+   * @param <C> type parameter
    * @return config
    * @apiNote 추가 설정 조회
    * @author FreshR
    * @since 2024. 3. 28. 오후 1:30:39
    */
-  public abstract CustomConfigurationAware getConfig();
+  public abstract <C extends CustomConfigurationAware> C getConfig();
 
 }
