@@ -25,7 +25,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
-import run.freshr.common.configurations.CustomConfigurationAware;
 import run.freshr.common.data.ExceptionData;
 import run.freshr.common.data.ExceptionsData;
 import run.freshr.common.data.ResponseData;
@@ -39,7 +38,7 @@ import run.freshr.common.dto.response.IdResponse;
  * @since 2024. 3. 28. 오후 1:30:39
  */
 @Component
-public abstract class RestUtilAware<C extends CustomConfigurationAware> {
+public abstract class RestUtilAware {
 
   private static final ObjectMapper objectMapper;
 
@@ -541,15 +540,5 @@ public abstract class RestUtilAware<C extends CustomConfigurationAware> {
   public static String field(HashMap<?, ?> map) {
     return Optional.of(map.get("name").toString()).orElse("");
   }
-
-  /**
-   * 추가 설정 조회
-   *
-   * @return config
-   * @apiNote 추가 설정 조회
-   * @author FreshR
-   * @since 2024. 3. 28. 오후 1:30:39
-   */
-  public abstract C getConfig();
 
 }
